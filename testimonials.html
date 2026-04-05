@@ -16,9 +16,9 @@
   <style>
     
     :root {
-      --black: #0a0a0a;
-      --charcoal: #141414;
-      --gold: #C9A84C;
+      --black: #0a0603;
+      --charcoal: #140c06;
+      --gold: #b87333;
       --white: #f5f5f0;
       --dim: #888;
       --border: rgba(255,255,255,0.07);
@@ -90,10 +90,10 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
       text-decoration: none; padding: 14px 22px; border-radius: 2px;
-      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+      box-shadow: 0 4px 24px rgba(184,115,51,0.35);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
+    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(184,115,51,0.5); }
     /* FADE-UP ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -167,10 +167,10 @@
       margin-bottom: 24px;
     }
     .hero-sub { font-size: 0.88rem; color: var(--dim); max-width: 380px; line-height: 1.8; margin-bottom: 40px; }
-    .btn-gold { border-radius: 1px; }
-    .btn-outline { border-radius: 1px; }
-    .book-float { border-radius: 1px; }
-    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+    .btn-gold { border-radius: 2px; }
+    .btn-outline { border-radius: 2px; }
+    .book-float { border-radius: 2px; }
+    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3px; }
     .gallery-item { aspect-ratio: auto; }
     .gallery-item img { height: auto; width: 100%; display: block; }
     .gallery-item:nth-child(1) { grid-column: span 2; aspect-ratio: 16/9; }
