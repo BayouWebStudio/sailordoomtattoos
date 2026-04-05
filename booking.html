@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking &#x2014; &#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;.</title>
-  <meta name="description" content="Book a tattoo session with &#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. in Tattoo Temple Houston.">
+  <meta name="description" content="Book a tattoo session with &#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. in Houston, Texas.">
   <link rel="canonical" href="https://eternowebstudio.com/sailordoomtattoos/booking.html">
   <meta property="og:title" content="Booking &#x2014; &#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;.">
   <meta property="og:image" content="https://eternowebstudio.com/sailordoomtattoos/img/1.jpg">
@@ -141,6 +141,99 @@
     /* &#x2500;&#x2500; LAYOUT OVERRIDES &#x2500;&#x2500; */
     /* Each variant gets unique CSS that overrides common defaults */
 
+    /* RAW LAYOUT: oversized type, thick borders, aggressive spacing, zine aesthetic */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 0 24px; position: relative;
+      background: var(--black);
+      border-bottom: 6px solid var(--gold);
+    }
+    .hero-bg { display: none; }
+    .hero-gradient { display: none; }
+    .hero-content {
+      max-width: 100%; position: relative;
+      padding: 40px 0;
+    }
+    .hero-eyebrow {
+      font-size: 0.64rem; letter-spacing: 0.36em;
+      color: var(--gold); margin-bottom: 32px;
+      text-transform: uppercase; font-weight: 600;
+      padding-left: 4px;
+      border-left: 4px solid var(--gold);
+    }
+    h1 {
+      font-size: clamp(4rem, 14vw, 12rem);
+      font-weight: 800; line-height: 0.82; letter-spacing: -0.04em;
+      margin-bottom: 28px; text-transform: uppercase;
+      color: var(--white);
+    }
+    .hero-sub {
+      font-size: 1rem; color: var(--dim); max-width: 420px;
+      line-height: 1.7; margin-bottom: 48px;
+      border-left: 2px solid var(--border);
+      padding-left: 20px;
+    }
+    .hero-cta {
+      border: 3px solid var(--gold); color: var(--gold);
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.24em;
+      padding: 18px 36px; text-transform: uppercase;
+    }
+    .gallery-section {
+      padding: 0; background: var(--black);
+      border-bottom: 6px solid var(--gold);
+    }
+    .gallery-scroll {
+      display: flex; overflow-x: auto;
+      scroll-snap-type: x mandatory; gap: 4px;
+      padding: 24px; scrollbar-width: none;
+    }
+    .gallery-scroll::-webkit-scrollbar { display: none; }
+    .gallery-scroll .gallery-item {
+      flex: 0 0 320px; scroll-snap-align: start;
+      aspect-ratio: 3/4; overflow: hidden;
+    }
+    .gallery-scroll .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(0.3) brightness(0.9); transition: filter 0.3s;
+    }
+    .gallery-scroll .gallery-item:hover img {
+      filter: grayscale(0) brightness(1);
+    }
+    .booking-preview {
+      border-top: 6px solid var(--gold);
+    }
+    .testimonials-preview {
+      border-top: 2px solid var(--border);
+    }
+    .booking-preview h2 { text-transform: uppercase; letter-spacing: 0.02em; }
+    .testimonials-preview h2 { text-transform: uppercase; letter-spacing: 0.02em; }
+    .btn-gold {
+      border: 3px solid var(--gold); font-weight: 700;
+      letter-spacing: 0.24em; border-radius: 0;
+    }
+    .btn-outline {
+      border: 3px solid var(--border); color: var(--gold);
+      font-weight: 700; letter-spacing: 0.24em; border-radius: 0;
+    }
+    .book-float {
+      border: 3px solid var(--gold); border-radius: 0;
+      font-weight: 700; letter-spacing: 0.2em;
+    }
+    .section-label {
+      letter-spacing: 0.36em; font-weight: 700;
+      font-size: 0.62rem;
+    }
+    footer {
+      border-top: 4px solid var(--gold);
+    }
+    .about-preview { border-top: 2px solid var(--border); }
+    .fade-up { opacity: 1; transform: none; transition: none; }
+    @media (max-width: 900px) {
+      .hero { padding: 0 16px; }
+      h1 { font-size: clamp(3rem, 16vw, 8rem); }
+      .gallery-scroll .gallery-item { flex: 0 0 260px; }
+    }
+
   
     .page-hero { padding: 140px 72px 64px; background: var(--charcoal); border-bottom: 1px solid var(--border); }
     .page-eyebrow { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
@@ -219,7 +312,7 @@
         <p class="fade-up">Every piece is unique, created with intention and care.</p>
         <div class="info-block fade-up">
           <h3 data-en="Details" data-es="Detalles">Details</h3>
-          <div class="info-item"><span>&#x25c6;</span> <span>Tattoo Temple Houston, US</span></div>
+          <div class="info-item"><span>&#x25c6;</span> <span>Houston, Texas, US</span></div>
           <div class="info-item"><span>&#x25c6;</span> <span data-en="Specializing in Tattoo Art" data-es="Especialidad: Tattoo Art">Specializing in Tattoo Art</span></div>
           <div class="info-item"><span>&#x25c6;</span> <a href="https://www.instagram.com/sailor.doom.tattoos" target="_blank" rel="noopener" style="color:var(--dim);text-decoration:none;">@sailor.doom.tattoos</a></div>
           
