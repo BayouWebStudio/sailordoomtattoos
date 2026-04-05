@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. &#x2014; Tattoo Artist | US</title>
-  <meta name="description" content="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. is a tattoo artist based in US specializing in Tattoo Art. Tattoos that tell your story. Based in US.">
+  <title>&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. &#x2014; Tattoo Artist | Houston, Texas</title>
+  <meta name="description" content="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. is a tattoo artist based in Houston, Texas specializing in Tattoo Art. Tattoos that tell your story. Based in Houston, Texas.">
   <link rel="canonical" href="https://eternowebstudio.com/sailordoomtattoos/">
   <meta property="og:title" content="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. &#x2014; Tattoo Artist">
-  <meta property="og:description" content="Tattoos that tell your story. Based in US.">
+  <meta property="og:description" content="Tattoos that tell your story. Based in Houston, Texas.">
   <meta property="og:image" content="https://eternowebstudio.com/sailordoomtattoos/img/1.jpg">
   <meta property="og:url" content="https://eternowebstudio.com/sailordoomtattoos/">
   <meta property="og:type" content="website">
@@ -23,7 +23,7 @@
     "jobTitle": "Tattoo Artist",
     "url": "https://eternowebstudio.com/sailordoomtattoos/",
     "sameAs": ["https://www.instagram.com/sailor.doom.tattoos"],
-    "address": { "@type": "PostalAddress", "addressLocality": "US", "addressCountry": "US" }
+    "address": { "@type": "PostalAddress", "addressLocality": "Houston, Texas", "addressCountry": "US" }
   }
   </script>
   <style>
@@ -154,6 +154,51 @@
     /* &#x2500;&#x2500; LAYOUT OVERRIDES &#x2500;&#x2500; */
     /* Each variant gets unique CSS that overrides common defaults */
 
+    /* SPLIT LAYOUT: 50/50 hero, masonry gallery */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      padding: 0; position: relative; overflow: hidden;
+      align-items: stretch;
+    }
+    .hero-image-panel {
+      position: relative; overflow: hidden;
+      background-image: url('img/1.jpg');
+      background-size: cover; background-position: center;
+    }
+    .hero-image-panel::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 50%, var(--black) 100%);
+    }
+    .hero-content-panel {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 60px 72px 60px 60px; position: relative;
+    }
+    .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 200; line-height: 0.92;
+      margin-bottom: 24px;
+    }
+    .hero-sub { font-size: 0.88rem; color: var(--dim); max-width: 380px; line-height: 1.8; margin-bottom: 40px; }
+    .btn-gold { border-radius: 2px; }
+    .btn-outline { border-radius: 2px; }
+    .book-float { border-radius: 2px; }
+    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0px; }
+    .gallery-item { aspect-ratio: auto; }
+    .gallery-item img { height: auto; width: 100%; display: block; }
+    .gallery-item:nth-child(1) { grid-column: span 2; aspect-ratio: 16/9; }
+    .gallery-item:nth-child(4) { grid-column: span 2; aspect-ratio: 16/9; }
+    .gallery-item:nth-child(5) { aspect-ratio: 3/4; }
+    .gallery-item:nth-child(6) { aspect-ratio: 16/9; }
+    .about-preview { padding-left: 72px; padding-right: 72px; }
+    .about-grid { gap: 56px; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-image-panel { min-height: 40vh; }
+      .hero-image-panel::after { background: linear-gradient(to top, var(--black) 0%, transparent 50%); }
+      .hero-content-panel { padding: 48px 24px; }
+    }
+
   
     /* HERO */
     .hero {
@@ -262,14 +307,13 @@
   <!-- HERO -->
   
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-gradient"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow fade-up" data-en="Tattoo Art" data-es="Tattoo Art">Tattoo Art &#xb7; US, US</p>
+    <div class="hero-image-panel"></div>
+    <div class="hero-content-panel">
+      <p class="hero-eyebrow fade-up" data-en="Tattoo Art" data-es="Tattoo Art">Tattoo Art &#xb7; Houston, Texas, US</p>
       <h1 class="fade-up" data-en="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;." data-es="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;.">&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;.</h1>
-      <p class="hero-sub fade-up" data-en="Tattoos that tell your story. Based in US." data-es="Tattoos that tell your story. Based in US.">Tattoos that tell your story. Based in US.</p>
+      <p class="hero-sub fade-up" data-en="Tattoos that tell your story. Based in Houston, Texas." data-es="Tattoos that tell your story. Based in Houston, Texas.">Tattoos that tell your story. Based in Houston, Texas.</p>
       <a href="./booking.html" class="hero-cta fade-up" data-en="Book a Session" data-es="Book a Session">Book a Session</a>
-      <div class="social-row fade-up">
+      <div class="social-row fade-up" style="margin-top:28px;">
         <a href="https://www.instagram.com/sailor.doom.tattoos" target="_blank" rel="noopener">@sailor.doom.tattoos</a>
         <span style="color:var(--border)">&#xb7;</span>
         <a href="https://www.instagram.com/sailor.doom.tattoos">Contact</a>
@@ -285,7 +329,7 @@
         <p class="section-label fade-up" data-en="About" data-es="Sobre M&#xed;">About</p>
         <h2 class="fade-up">The Art Behind the Artist</h2>
         <div class="about-text">
-          <p class="fade-up">I&#39;m &#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;., a tattoo artist based in US.</p>
+          <p class="fade-up">I&#39;m &#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;., a tattoo artist based in Houston, Texas.</p>
           <p class="fade-up">My work reflects a deep passion for art and skin as canvas.</p>
         </div>
         <div class="stats-row fade-up">
@@ -302,7 +346,7 @@
         <a href="./about.html" class="about-link fade-up" data-en="Read More &#x2192;" data-es="Leer M&#xe1;s &#x2192;">Read More &#x2192;</a>
       </div>
       <div>
-        <img src="img/1.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;." class="about-img fade-up">
+        <img src="img/2.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;." class="about-img fade-up">
       </div>
     </div>
   </section>
@@ -315,7 +359,12 @@
     </div>
     
     <div class="gallery-grid">
-      
+      <div class="gallery-item"><img src="img/1.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. tattoo 1" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/2.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. tattoo 2" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/3.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. tattoo 3" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/4.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. tattoo 4" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/5.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. tattoo 5" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/6.jpg" alt="&#x1d4dc;&#x1d4ea;&#x1d4ed;&#x1d4ee;&#x1d4f5;&#x1d4f2;&#x1d4f7;&#x1d4ee; &#x1d4d1;. tattoo 6" loading="lazy"></div>
     </div>
     
     <div class="gallery-cta-wrap fade-up">
